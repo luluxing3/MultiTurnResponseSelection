@@ -10,6 +10,7 @@ import theano
 import theano.tensor as T
 import numpy as np
 def ortho_weight(ndim):
+    '''ortho initialize'''
     W = np.random.randn(ndim, ndim)
     u, s, v = np.linalg.svd(W)
     return u.astype('float32')
